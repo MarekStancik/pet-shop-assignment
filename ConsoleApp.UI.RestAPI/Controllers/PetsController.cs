@@ -23,7 +23,6 @@ namespace ConsoleApp.UI.RestAPI.Controllers
 
         }
         // GET api/values - // Get all pets
-        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<Pet>> Get([FromQuery] Filter filter )
         {
@@ -42,7 +41,6 @@ namespace ConsoleApp.UI.RestAPI.Controllers
             }
 
         // GET api/values/5 - // Get pet with ID
-        [Authorize]
         [HttpGet("{id}")]
         public ActionResult<Pet> Get(int id)
         {
@@ -53,7 +51,6 @@ namespace ConsoleApp.UI.RestAPI.Controllers
         }
 
         // GET api/values - // Sort pets by price ASC or DESC
-        [Authorize]
         [HttpGet("Sorting")]
         public ActionResult<IEnumerable<Pet>> Get([FromQuery] string ascORdesc)
         {
@@ -69,7 +66,6 @@ namespace ConsoleApp.UI.RestAPI.Controllers
         }
 
         // GET api/values - // get 5 cheapest pets 
-        [Authorize]
         [HttpGet("GetCheapest")]
         public ActionResult<IEnumerable<Pet>> Cheapest()
         {

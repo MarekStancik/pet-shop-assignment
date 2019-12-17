@@ -13,7 +13,7 @@ namespace Infrastructure.SQLData
         public static void SeedDB(PetShopAppContext ctx,IAuthenticationHelper authenticationHelper)
         {
 
-            ctx.Database.EnsureDeleted();
+           // ctx.Database.EnsureDeleted();
             ctx.Database.EnsureCreated();
 
              if (ctx.Owners.Any())

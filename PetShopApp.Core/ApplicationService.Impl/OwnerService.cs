@@ -3,6 +3,7 @@ using PetShopApp.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace PetShopApp.Core.ApplicationService.Impl
 {
@@ -24,6 +25,15 @@ namespace PetShopApp.Core.ApplicationService.Impl
 
         public Owner CreateOwner(Owner owner)
         {
+            if(owner == null)
+                throw new NullReferenceException("Cannot create null owner");
+
+            if (String.IsNullOrEmpty(owner.FirstName))
+                throw new InvalidDataException("Owner needs a FirstName to be created");
+
+            if (String.IsNullOrEmpty(owner.LastName))
+                throw new InvalidDataException("Owner needs a LastName to be created");
+
             return ownerRepos.Create(owner);
         }
 

@@ -15,9 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShopApp.Core", "PetShopA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShopApp.Core.Entities", "PetShopApp.Core.Entities\PetShopApp.Core.Entities.csproj", "{AB17994C-FD05-4A51-8AC2-60866C0DC8CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.UI.RestAPI", "ConsoleApp.UI.RestAPI\ConsoleApp.UI.RestAPI.csproj", "{22E1E657-8F74-4495-A989-D392AE47114C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetShopApp.UI.RESTApi", "ConsoleApp.UI.RestAPI\PetShopApp.UI.RESTApi.csproj", "{22E1E657-8F74-4495-A989-D392AE47114C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.SQLData", "Infrastructure.Data.SQL\Infrastructure.SQLData.csproj", "{DEC24173-4665-4E56-A0E3-0A2A9267AD2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{14556AD3-C996-4F27-B253-787177531DEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShopApp.UnitTest", "PetShopApp.UnitTest\PetShopApp.UnitTest.csproj", "{C5AA5FDE-7964-41EF-A679-F11AE973B77D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{DEC24173-4665-4E56-A0E3-0A2A9267AD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEC24173-4665-4E56-A0E3-0A2A9267AD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEC24173-4665-4E56-A0E3-0A2A9267AD2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AA5FDE-7964-41EF-A679-F11AE973B77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AA5FDE-7964-41EF-A679-F11AE973B77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AA5FDE-7964-41EF-A679-F11AE973B77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AA5FDE-7964-41EF-A679-F11AE973B77D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{AB17994C-FD05-4A51-8AC2-60866C0DC8CE} = {8A53A1E5-D788-4D41-A3A6-10AF07CDC904}
 		{22E1E657-8F74-4495-A989-D392AE47114C} = {4A998246-3B37-4CF6-BD36-FCB1DFE8A932}
 		{DEC24173-4665-4E56-A0E3-0A2A9267AD2C} = {3B739599-5A84-4DD5-AFB4-A21308264893}
+		{C5AA5FDE-7964-41EF-A679-F11AE973B77D} = {14556AD3-C996-4F27-B253-787177531DEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {109DC564-C35E-4F99-9FAB-C04137EF1CA1}

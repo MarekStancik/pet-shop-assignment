@@ -31,7 +31,7 @@ namespace ConsoleApp.UI.RestAPI.Controllers
                 if (_ownerService.Count() < filter.ItemsPrPage * (filter.CurrentPage - 1))
                     return BadRequest("Current page is too high");
                 //return _petService.GetPets();
-                return _ownerService.GetFilteredOwners(filter);
+                return Ok(_ownerService.GetFilteredOwners(filter));
             }
 
         }
@@ -44,8 +44,7 @@ namespace ConsoleApp.UI.RestAPI.Controllers
                 return BadRequest("No Owner with this ID.");
             else
             {
-              return _ownerService.FindOwnerWithIDincludingPets(id);
-             
+                return Ok(_ownerService.FindOwnerWithIDincludingPets(id));
             }
         }
 
@@ -63,8 +62,8 @@ namespace ConsoleApp.UI.RestAPI.Controllers
             {
                 return BadRequest("Last name required.");
             }
-             _ownerService.CreateOwner(o);
-           return Ok("Owner successfully created.");
+            
+            return Ok(_ownerService.CreateOwner(o));
         }
 
         // PUT api/values/5 - // EDIT
@@ -83,8 +82,8 @@ namespace ConsoleApp.UI.RestAPI.Controllers
             {
                 return BadRequest("Last name required.");
             }
-            _ownerService.UpdateOwner(o);
-            return Ok("Pet was successfully updated.");
+
+            return Ok(_ownerService.UpdateOwner(o));
         }
 
         // DELETE api/values/5 - //DELETE PET
@@ -94,10 +93,7 @@ namespace ConsoleApp.UI.RestAPI.Controllers
             if (null == _ownerService.FindOwnerWithId(id))
                 return BadRequest("There is no owner with this ID.");
             else
-            {
-               _ownerService.DeleteOwner(id);
-                return Ok("Owner deleted.");
-            }
+                return Ok(_ownerService.DeleteOwner(id));
         }
 
     }

@@ -40,6 +40,7 @@ namespace ConsoleApp.UI.RestAPI.Controllers
             return Ok(new
             {
                 username = user.Username,
+                isAdmin = user.IsAdmin,
                 token = _authenticationHelper.GenerateToken(user)
             });
         }
